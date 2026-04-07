@@ -74,7 +74,7 @@
 %global ai_assistant_archive %{ai_assistant_name}-%{ai_assistant_version}
 
 Name:          %{appname}-plugins
-Version:       2025.3.3
+Version:       2026.1
 Release:       1%{?dist}
 
 Summary:       Plugins for intelligent Python IDE
@@ -145,6 +145,9 @@ cp -arf ./%{ai_assistant_name} %{buildroot}%{_javadir}/%{appname}/%{plugins_dir}
 %{_javadir}/%{appname}/%{plugins_dir}/%{ai_assistant_name}
 
 %changelog
+* Tue Apr 07 2026 Elkhan Mammadli <elkhan.mammadli@protonmail.com> - 2026.1-1
+- new version
+
 * Sat Feb 21 2026 Elkhan Mammadli <elkhan.mammadli@protonmail.com> - 2025.3.3-1
 - Docker from 253.29346.125 to 253.31033.21.
 - IdeaVim from 2.28.0 to 2.29.0.
