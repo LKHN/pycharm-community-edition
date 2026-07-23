@@ -19,7 +19,7 @@
 %global __requires_exclude_from %{_javadir}/%{name}/jbr/.*|%{_javadir}/%{name}/lib/.*|%{_javadir}/%{name}/plugins/.*
 
 Name:          %{appname}-community
-Version:       2026.1.4
+Version:       2026.2
 Release:       1%{?dist}
 
 Summary:       Intelligent Python IDE
@@ -66,9 +66,9 @@ This package contains documentation for the Intelligent Python IDE.
 
 %prep
 %ifarch aarch64
-%setup -q -T -b 1 -n %{name}-%{version}
+%setup -q -T -b 1 -n pycharm-oss
 %else
-%setup -q -T -b 0 -n %{name}-%{version}
+%setup -q -T -b 0 -n pycharm-oss
 %endif
 
 # Removing trialware plugins...
@@ -143,6 +143,10 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 %doc Install-Linux-tar.txt
 
 %changelog
+* Tue Jul 21 2026 Elkhan Mammadli <elkhan.mammadli@protonmail.com> - 2026.2-1
+- Update to 2026.2
+- Update root directory name of source tarball
+
 * Fri Jul 03 2026 Elkhan Mammadli <elkhan.mammadli@protonmail.com> - 2026.1.4-1
 - Update to 2026.1.4
 

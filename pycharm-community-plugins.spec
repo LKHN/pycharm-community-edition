@@ -32,26 +32,26 @@
 %global rpm_spec_file_archive %{rpm_spec_file_name}-%{rpm_spec_file_version}
 
 # https://plugins.jetbrains.com/plugin/7724-docker/versions
-%global docker_integration_version 261.26222.24
-%global docker_integration_id 1087550
+%global docker_integration_version 262.8665.185
+%global docker_integration_id 1103154
 %global docker_integration_name clouds-docker-impl
 %global docker_integration_archive %{docker_integration_name}-%{docker_integration_version}
 
 # https://plugins.jetbrains.com/plugin/164-ideavim/versions
-%global ideavim_version 2.42.0
-%global ideavim_id 1094245
+%global ideavim_version 2.44.0
+%global ideavim_id 1112900
 %global ideavim_name IdeaVIM
 %global ideavim_archive %{ideavim_name}-%{ideavim_version}
 
 # https://plugins.jetbrains.com/plugin/6981-ini/versions
-%global ini_version 261.22158.185
-%global ini_id 989135
+%global ini_version 262.8665.176
+%global ini_id 1102600
 %global ini_name ini
 %global ini_archive %{ini_name}-%{ini_version}
 
 # https://plugins.jetbrains.com/plugin/7566-settings-repository/versions
-%global settings_repository_version 261.23567.71
-%global settings_repository_id 1022044
+%global settings_repository_version 262.8665.173
+%global settings_repository_id 1102455
 %global settings_repository_name settingsRepository
 %global settings_repository_archive %{settings_repository_name}-%{settings_repository_version}
 
@@ -62,19 +62,19 @@
 %global ignore_plugin_archive ignore-%{ignore_plugin_version}
 
 # https://plugins.jetbrains.com/plugin/9525--env-files/versions
-%global env_files_version 261.26222.68
-%global env_files_id 1097428
+%global env_files_version 262.8665.309
+%global env_files_id 1112383
 %global env_files_name dotenv
 %global env_files_archive %{env_files_name}-%{env_files_version}
 
 # https://plugins.jetbrains.com/plugin/22282-jetbrains-ai-assistant/versions
-%global ai_assistant_version 261.26222.68
-%global ai_assistant_id 1097427
+%global ai_assistant_version 262.8665.309
+%global ai_assistant_id 1112379
 %global ai_assistant_name ml-llm
 %global ai_assistant_archive %{ai_assistant_name}-%{ai_assistant_version}
 
 Name:          %{appname}-plugins
-Version:       2026.1.4
+Version:       2026.2
 Release:       1%{?dist}
 
 Summary:       Plugins for intelligent Python IDE
@@ -145,6 +145,14 @@ cp -arf ./%{ai_assistant_name} %{buildroot}%{_javadir}/%{appname}/%{plugins_dir}
 %{_javadir}/%{appname}/%{plugins_dir}/%{ai_assistant_name}
 
 %changelog
+* Tue Jul 21 2026 Elkhan Mammadli <elkhan.mammadli@protonmail.com> - 2026.2-1
+- Docker from 261.26222.24 to 262.8665.185.
+- IdeaVim from 2.42.0 to 2.44.0.
+- Ini from 261.22158.185 to 262.8665.176.
+- Settings Repository from 261.23567.71 to 262.8665.173.
+- .env files from 261.26222.68 to 262.8665.309.
+- JetBrains AI Assistant from 261.26222.68 to 262.8665.309.
+
 * Fri Jul 03 2026 Elkhan Mammadli <elkhan.mammadli@protonmail.com> - 2026.1.4-1
 - Docker from 261.24374.91 to 261.26222.24.
 - IdeaVim from 2.37.0 to 2.42.0.
